@@ -1,0 +1,16 @@
+{
+  "name": "ap-memory-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-Ready Real-Time AP Memory Agent with Hindsight Long-Term Memory and Groq LLM",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "start": "npm --prefix backend run start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
